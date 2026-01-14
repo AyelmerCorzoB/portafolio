@@ -1,110 +1,505 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio</title>
+    <meta name="description" content="Portafolio de Freiler Ortega Estupiñan - Desarrollador de Software">
+    <title>Freiler Ortega | Desarrollador de Software</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
 </head>
+
 <body data-theme="light">
-   
+
+    <!-- Cursor personalizado -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Botón de tema -->
     <button class="theme-toggle" aria-label="Cambiar tema">
-        <span class="sun-icon">☀️</span>
-        <span class="moon-icon">🌙</span>
+        <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
     </button>
 
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#about">Sobre mí</a></li>
-                <li><a href="#projects">Proyectos</a></li>
-                <li><a href="#skills">Habilidades</a></li>
-                <li><a href="#contact">Contacto</a></li>
+    <!-- Navegación fija -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-text">FO</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about" class="nav-link">Sobre mí</a></li>
+                <li><a href="#projects" class="nav-link">Proyectos</a></li>
+                <li><a href="#skills" class="nav-link">Habilidades</a></li>
+                <li><a href="#contact" class="nav-link">Contacto</a></li>
             </ul>
-        </nav>
-        <div class="header-content">
-            <h1>Hola, soy Freiler Ortega Estupiñan</h1>
-            <p>Desarrollador de Software Semijunior</p>
+            <button class="mobile-menu-btn" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul class="mobile-nav-links">
+            <li><a href="#about">Sobre mí</a></li>
+            <li><a href="#projects">Proyectos</a></li>
+            <li><a href="#skills">Habilidades</a></li>
+            <li><a href="#contact">Contacto</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-bg">
+            <div class="hero-gradient"></div>
+            <div class="hero-grid"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Disponible para trabajar
+            </div>
+            <h1 class="hero-title">
+                <span class="title-line">Hola, soy</span>
+                <span class="title-name">Freiler Ortega</span>
+            </h1>
+            <p class="hero-subtitle">Desarrollador de Software</p>
+            <p class="hero-description">
+                Transformo ideas en experiencias digitales excepcionales.
+                Especializado en desarrollo web con pasión por el código limpio y el diseño intuitivo.
+            </p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">
+                    Ver proyectos
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+                <a href="#contact" class="btn btn-secondary">Contactar</a>
+            </div>
+            <div class="hero-social">
+                <a href="https://github.com/FreilerOrtega" target="_blank" rel="noopener noreferrer" class="social-link"
+                    aria-label="GitHub">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link"
+                    aria-label="LinkedIn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
         </div>
     </header>
 
+    <!-- Sobre mí -->
     <section id="about" class="about-section">
-        <h2>Sobre mí</h2>
-        <div class="about-content">
-            <img src="IMG/FotoPerfil.jpeg" alt="Foto de Freiler Ortega" class="profile-photo">
-            <p>Soy un apasionado del desarrollo web. Tengo experiencia en tecnologías como HTML, CSS, JavaScript y más. Siempre estoy buscando mejorar y aprender nuevas herramientas para potenciar mis habilidades.</p>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">01</span>
+                <h2 class="section-title">Sobre mí</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-image-wrapper">
+                    <div class="about-image-decoration"></div>
+                    <img src="/IMG/FotoPerfil.jpeg" alt="Foto de Freiler Ortega" class="about-image">
+                </div>
+                <div class="about-text">
+                    <h3 class="about-heading">Desarrollador apasionado por crear experiencias digitales</h3>
+                    <p class="about-description">
+                        Soy un desarrollador de software con experiencia en tecnologías web modernas.
+                        Me especializo en crear aplicaciones intuitivas y eficientes que resuelven problemas reales.
+                    </p>
+                    <p class="about-description">
+                        Mi enfoque se centra en escribir código limpio, mantenible y escalable.
+                        Siempre estoy aprendiendo nuevas tecnologías y mejorando mis habilidades para
+                        ofrecer las mejores soluciones.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">2+</span>
+                            <span class="stat-label">Años de experiencia</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Proyectos completados (ya quisiera)</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">Tecnologías dominadas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
+    <!-- Proyectos -->
     <section id="projects" class="projects-section">
-        <h2>Proyectos</h2>
-        <div class="project-grid">
-            <div class="project">
-                <h3>Pokédex</h3>
-                <a href="https://github.com/FreilerOrtega/Pokedex" target="_blank" rel="noopener noreferrer"><p>Recrea la famosa pokedex de pokemon los populares dibujos animados .</p>
-                    <img src="IMG/p.jpg" alt="Pokédex" class="project-photo">
-                </a>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">02</span>
+                <h2 class="section-title">Proyectos destacados</h2>
             </div>
-            <div class="project">
-                <h3>Superhéroes</h3>
-                <a href="http://127.0.0.1:5500/javascript/dia7/index.html"><p>Una galería dinámica de superhéroes con filtros y animaciones de forma ordenada.</p>
-                <img src="IMG/m.jpg" alt="Superhéroes" class="project-photo"></a>
-                
-            </div>
-            <div class="project">
-                <h3>SpaceX</h3>
-                <a href="https://github.com/CamiloMachuca/PROYECTO_FILTRO_JS_MachucaCamilo_FreilerOrtega"> <p>Programas basado en la exitosa empresa SpaceX que muestra su catálogo de naves </p>
-                <img src="IMG/s.jpg" alt="SpaceX" class="project-photo"></a>
-               
+            <div class="projects-grid">
+                <!-- Proyecto 1 -->
+                <article class="project-card project-featured">
+                    <div class="project-image">
+                        <img src="/IMG/p.jpg" alt="Pokédex">
+                        <div class="project-overlay">
+                            <a href="https://github.com/FreilerOrtega/Pokedex" target="_blank" rel="noopener noreferrer"
+                                class="project-link">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">API REST</span>
+                            <span class="tag">CSS</span>
+                        </div>
+                        <h3 class="project-title">Pokédex</h3>
+                        <p class="project-description">
+                            Aplicación interactiva que recrea la famosa Pokédex de los populares dibujos animados.
+                            Consume la PokéAPI para mostrar información detallada de cada Pokémon.
+                        </p>
+                        <a href="https://github.com/FreilerOrtega/Pokedex" target="_blank" rel="noopener noreferrer"
+                            class="project-cta">
+                            Ver proyecto
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Proyecto 2 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="/IMG/m.jpg" alt="Superhéroes">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Animaciones</span>
+                        </div>
+                        <h3 class="project-title">Galería de Superhéroes</h3>
+                        <p class="project-description">
+                            Una galería dinámica de superhéroes con filtros avanzados y animaciones fluidas.
+                        </p>
+                        <a href="#" class="project-cta">
+                            Ver proyecto
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Proyecto 3 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="/IMG/s.jpg" alt="SpaceX">
+                        <div class="project-overlay">
+                            <a href="https://github.com/CamiloMachuca/PROYECTO_FILTRO_JS_MachucaCamilo_FreilerOrtega"
+                                target="_blank" rel="noopener noreferrer" class="project-link">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">API</span>
+                        </div>
+                        <h3 class="project-title">SpaceX Catalog</h3>
+                        <p class="project-description">
+                            Catálogo interactivo de las naves y cohetes de SpaceX con información en tiempo real.
+                        </p>
+                        <a href="https://github.com/CamiloMachuca/PROYECTO_FILTRO_JS_MachucaCamilo_FreilerOrtega"
+                            target="_blank" rel="noopener noreferrer" class="project-cta">
+                            Ver proyecto
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
 
+    <!-- Habilidades -->
     <section id="skills" class="skills-section">
-        <h2>Habilidades</h2>
-        <ul class="skills-list">
-            <li>HTML
-                <img src="IMG/html5.png" alt="HTML5" class="skill-icon">
-            </li>
-            <li>CSS
-                <img src="IMG/formato-de-archivo-css.png" alt="CSS" class="skill-icon">
-            </li>
-            <li>JavaScript
-                <img src="IMG/js.png" alt="JavaScript" class="skill-icon">
-            </li>
-            <li>Python
-                <img src="IMG/archivo.png" alt="Python" class="skill-icon">
-            </li>
-            <li>MySQL
-                <img src="IMG/mysql.png" alt="MySQL" class="skill-icon">
-            </li>
-        </ul>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">03</span>
+                <h2 class="section-title">Habilidades técnicas</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        
+                        <img src="/IMG/html5.png" alt="" width="40" height="40">
+                    </div>
+                    <h3 class="skill-name">HTML5</h3>
+                    <p class="skill-description">Estructura semántica y accesible</p>
+                    <div class="skill-level">
+                        <div class="skill-bar" style="--level: 95%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 256 361">
+                            <path fill="#264DE4" d="M127.844 360.088L23.662 331.166L.445 70.766h255.11l-23.241 260.36l-104.47 28.962Z" />
+                            <path fill="#2965F1" d="m212.417 314.547l19.86-222.49H128V337.95l84.417-23.403Z" />
+                            <path fill="#EBEBEB"
+                                d="m53.669 188.636l2.862 31.937H128v-31.937H53.669Zm-5.752-64.641l2.903 31.937H128v-31.937H47.917ZM128 271.58l-.14.037l-35.568-9.604l-2.274-25.471h-32.06l4.474 50.146l65.421 18.16l.147-.04V271.58Z" />
+                            <path
+                                d="M60.484 0h38.68v16.176H76.66v16.176h22.506v16.175H60.484V0Zm46.417 0h38.681v14.066h-22.505v2.813h22.505v32.352h-38.68V34.46h22.505v-2.813H106.9V0Zm46.418 0H192v14.066h-22.505v2.813H192v32.352h-38.681V34.46h22.505v-2.813H153.32V0Z" />
+                            <path fill="#FFF"
+                                d="m202.127 188.636l5.765-64.641H127.89v31.937h45.002l-2.906 32.704H127.89v31.937h39.327l-3.708 41.42l-35.62 9.614v33.226l65.473-18.145l.48-5.396l7.506-84.08l.779-8.576Z" />
+                        </svg>
+                    </div>
+                    <h3 class="skill-name">CSS3</h3>
+                    <p class="skill-description">Diseño responsive y animaciones</p>
+                    <div class="skill-level">
+                        <div class="skill-bar" style="--level: 90%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 32 32">
+                            <path fill="#ffe224"
+                                d="M1 1v30h30V1H1zm16.326 23.398c0 2.92-1.712 4.248-4.21 4.248c-2.254 0-3.563-1.168-4.228-2.576l2.296-1.39c.443.776.846 1.44 1.812 1.44c.926 0 1.51-.353 1.51-1.77v-9.58h2.82v9.628zm6.666 4.248c-2.618 0-4.31-1.248-5.135-2.88l2.295-1.327c.604.978 1.39 1.71 2.78 1.71c1.167 0 1.903-.584 1.903-1.396c0-.966-.766-1.31-2.054-1.865l-.7-.31c-2.034-.865-3.383-1.953-3.383-4.25c0-2.113 1.604-3.725 4.128-3.725c1.792 0 3.08.625 4.008 2.254l-2.19 1.405c-.48-.86-1.006-1.21-1.812-1.21c-.824 0-1.352.522-1.352 1.21c0 .852.52 1.188 1.73 1.71l.703.31c2.397 1.02 3.747 2.07 3.747 4.43c.007 2.544-1.986 3.93-4.665 3.93z" />
+                        </svg>
+                    </div>
+                    <h3 class="skill-name">JavaScript</h3>
+                    <p class="skill-description">ES6+ y manipulación del DOM</p>
+                    <div class="skill-level">
+                        <div class="skill-bar" style="--level: 85%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path fill="#0288d1"
+                                d="M9.86 2A2.86 2.86 0 0 0 7 4.86v1.68h4.29c.39 0 .71.57.71.96H4.86A2.86 2.86 0 0 0 2 10.36v3.781a2.86 2.86 0 0 0 2.86 2.86h1.18v-2.68a2.85 2.85 0 0 1 2.85-2.86h5.25c1.58 0 2.86-1.271 2.86-2.851V4.86A2.86 2.86 0 0 0 14.14 2zm-.72 1.61c.4 0 .72.12.72.71s-.32.891-.72.891c-.39 0-.71-.3-.71-.89s.32-.711.71-.711" />
+                            <path fill="#fdd835"
+                                d="M17.959 7v2.68a2.85 2.85 0 0 1-2.85 2.859H9.86A2.85 2.85 0 0 0 7 15.389v3.75a2.86 2.86 0 0 0 2.86 2.86h4.28A2.86 2.86 0 0 0 17 19.14v-1.68h-4.291c-.39 0-.709-.57-.709-.96h7.14A2.86 2.86 0 0 0 22 13.64V9.86A2.86 2.86 0 0 0 19.14 7zM8.32 11.513l-.004.004l.038-.004zm6.54 7.276c.39 0 .71.3.71.89a.71.71 0 0 1-.71.71c-.4 0-.72-.12-.72-.71s.32-.89.72-.89" />
+                        </svg>
+                    </div>
+                    <h3 class="skill-name">Python</h3>
+                    <p class="skill-description">Backend y automatización</p>
+                    <div class="skill-level">
+                        <div class="skill-bar" style="--level: 80%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 512 349">
+                            <path fill="#00758F"
+                                d="m152.31 230.297l15.56 50.487c3.496 11.463 4.954 19.465 4.37 24.026c8.51-22.792 14.456-47.63 17.839-74.513h18.71c-8.045 43.766-18.656 75.57-31.827 95.41c-10.262 15.289-21.504 22.933-33.746 22.933c-3.264 0-7.288-.986-12.063-2.944v-10.55c2.333.342 5.07.525 8.218.525c5.711 0 10.314-1.583 13.816-4.742c4.193-3.849 6.292-8.175 6.292-12.97c0-3.274-1.637-9.993-4.896-20.157l-21.68-67.505h19.406ZM33.223 199.266l28.5 86.956h.176l28.675-86.956h23.428c5.13 43.124 8.16 82.581 9.09 118.346H103.34c-.695-33.433-2.62-64.871-5.768-94.32H97.4l-30.078 94.32H52.28l-29.896-94.32h-.176c-2.218 28.282-3.614 59.72-4.196 94.32H0c1.164-42.08 4.077-81.525 8.739-118.346h24.485Z" />
+                            <path fill="#F29111"
+                                d="M352.498 197.51c30.657 0 45.986 19.586 45.986 58.739c0 21.276-4.61 37.347-13.821 48.204c-1.66 1.984-3.495 3.698-5.427 5.286l21.695 10.727l-.021-.001l-7.703 13.302l-28.253-16.485c-4.683 1.387-9.836 2.08-15.451 2.08c-15.053 0-26.297-4.387-33.731-13.15c-8.16-9.694-12.238-24.955-12.238-45.757c0-21.156 4.602-37.166 13.816-48.037c8.392-9.944 20.11-14.909 35.148-14.909Zm-93.88.172c10.957 0 20.92 2.932 29.894 8.775l-4.558 10.157c-7.679-3.264-15.25-4.903-22.716-4.903c-6.058 0-10.726 1.458-13.98 4.392c-3.272 2.908-5.296 6.65-5.296 11.212c0 7.01 4.994 13.089 14.215 18.225a816.32 816.32 0 0 1 9.031 5.011l.688.387l.345.194l.689.387l.344.194l.688.388c6.98 3.935 13.548 7.691 13.548 7.691c9.22 6.545 13.816 13.523 13.816 25.016c0 10.037-3.678 18.276-11.01 24.723c-7.337 6.418-17.194 9.636-29.538 9.636c-11.545 0-22.734-3.704-33.572-11.05l5.07-10.166c9.327 4.675 17.767 7.01 25.346 7.01c7.108 0 12.672-1.587 16.697-4.721c4.017-3.157 6.424-7.56 6.424-13.143c0-7.027-4.888-13.034-13.855-18.073a897.982 897.982 0 0 1-8.395-4.697l-.687-.389c-1.262-.713-2.533-1.435-3.778-2.142l-.675-.384c-6.055-3.444-11.29-6.453-11.29-6.453c-8.964-6.557-13.459-13.592-13.459-25.184c0-9.587 3.352-17.336 10.046-23.231c6.71-5.908 15.367-8.862 25.968-8.862Zm175.895 1.584v103.788h37.238v14.558h-56.124V199.266h18.886Zm57.93 103.833v2.46h-4.094v12.04h-3.13v-12.04h-4.253v-2.46h11.478Zm7.56 0l3.931 9.884l3.611-9.884h4.437v14.5h-2.95v-11.035l-4.11 11.035h-2.127l-4.117-11.035h-.158v11.035h-2.791v-14.5h4.275ZM350.57 212.064c-18.066 0-27.104 14.91-27.104 44.71c0 17.07 2.395 29.448 7.176 37.163c4.428 7.14 11.363 10.703 20.806 10.703c18.066 0 27.103-15.026 27.103-45.064c0-16.831-2.395-29.103-7.17-36.822c-4.433-7.124-11.365-10.69-20.81-10.69Z" />
+                            <path fill="#00758F"
+                                d="M303.218 7.333c5.993-14.726 26.948-3.574 35.08 1.57c1.993 1.287 4.279 4.006 6.564 5.011c3.565.14 7.127.419 10.698.568c6.698 1.574 12.972 2.86 18.25 5.866c24.528 14.445 40.495 29.165 55.19 53.479c3.14 5.15 4.709 10.723 7.274 16.296c3.56 8.307 7.56 17.027 11.692 24.882c1.85 3.724 3.281 7.865 5.85 11.01c1.003 1.438 3.852 1.862 5.555 2.721c4.708 2.437 10.412 4.287 14.84 7.147c8.269 5.156 16.264 11.3 23.532 17.59c2.709 2.428 4.555 5.865 7.136 8.433v1.296c-2.291.703-4.574 1.423-6.859 2c-4.991 1.282-9.412.992-14.254 2.275c-2.992.868-6.707 2.013-9.845 2.304l.29.292c1.846 5.275 11.834 9.565 16.402 12.72c5.548 4.004 10.689 8.86 14.827 14.437c1.429 1.423 2.858 2.718 4.28 4.137c.994 1.438 1.274 3.298 2.28 4.58v.434c-1.114-.393-1.915-1.143-2.674-1.927l-.453-.473c-.453-.47-.91-.932-1.431-1.313c-3.148-2.15-6.274-4.722-9.422-6.721c-5.412-3.434-11.689-5.427-17.246-8.874c-3.142-2.001-6.137-4.28-9.132-6.57c-2.715-2.007-5.705-5.861-7.411-8.721c-1.005-1.58-1.143-3.437-2.291-4.58c.205-1.909 1.954-2.476 3.719-2.942l.406-.107c.609-.158 1.205-.316 1.725-.525c7.414-3.148 16.253-4.29 27.667-4.004c-.43-2.866-7.562-6.437-9.839-8.153c-4.57-3.294-9.409-6.731-14.257-9.729c-2.569-1.57-6.996-2.716-9.842-3.999c-3.851-1.574-12.41-3.147-14.544-6.145c-3.625-4.726-6.229-10.363-8.757-16.057l-.688-1.554a803.85 803.85 0 0 0-.69-1.553c-2.988-6.857-6.7-14.006-9.695-21.027c-1.566-3.425-2.285-6.431-4-9.716c-10.407-20.158-25.81-37.035-44.485-48.904c-6.137-3.862-12.98-7.436-20.534-9.865c-4.281-1.293-9.419-.578-13.98-1.57h-3.002c-2.562-.722-4.701-3.438-6.7-4.87c-4.415-2.998-8.837-5.011-14.117-7.15c-1.85-.858-7.133-2.856-8.977-1.283c-1.142.287-1.721.718-2.002 1.864c-1.136 1.71-.137 4.286.57 5.863c2.142 4.57 5.134 7.286 7.85 11.148c2.416 3.425 5.417 7.287 7.13 11.011c3.696 8.005 5.417 16.874 8.842 24.878c1.27 3.01 3.279 6.435 5.128 9.15c1.567 2.155 4.416 3.713 5.278 6.441c1.718 2.86-2.572 12.297-3.565 15.294c-3.715 11.727-2.995 28.028 1.283 38.193l.228.536l.228.543c1.562 3.723 3.234 7.732 7.387 8.773c.286-.284 0-.135.567-.284c1.005-7.868 1.288-15.445 4-21.601c1.567-3.849 4.696-6.57 6.841-9.712c1.43.856 1.43 3.437 2.282 5.145c1.856 4.43 3.849 9.287 6.137 13.73c4.696 9.15 9.98 18.021 15.967 26.025c2.005 2.859 4.85 6.006 7.416 8.581c1.143.997 2.423 1.573 3.282 2.856h.28v.432c-4.278-1.577-6.99-6.003-10.402-8.587c-6.424-4.857-14.117-12.151-18.545-19.15c-1.852-4.018-3.854-7.869-5.85-11.867v-.289c-.853 1.142-.567 2.276-.994 4.004c-1.852 7.145-.426 15.296-6.843 17.866c-7.274 3.01-12.7-4.857-14.977-8.432c-7.276-11.866-9.269-31.884-4.138-48.043c1.14-3.577 1.295-7.867 3.285-10.723c-.43-2.582-2.42-3.288-3.571-4.87c-1.996-2.704-3.705-5.854-5.268-8.857c-3.002-5.866-5.138-12.875-7.417-19.166c-1.002-2.569-1.289-5.148-2.288-7.58c-1.704-3.712-4.845-7.436-7.268-10.72c-3.281-4.72-12.837-13.868-8.985-23.168Zm46.772 28.015c.381.382.841.716 1.317 1.045l.574.394c.765.53 1.506 1.088 1.96 1.848c.72 1.006.854 1.999 1.716 3.007c0 3.437-.996 5.722-3.007 7.146c0 0-.137.15-.278.29c-1.14-2.291-2.139-4.57-3.287-6.859c-1.414-1.998-3.413-3.583-4.565-5.866h-.277v-.287c1.721-.425 3.428-.718 5.847-.718Z" />
+                        </svg>
+                    </div>
+                    <h3 class="skill-name">MySQL</h3>
+                    <p class="skill-description">Bases de datos relacionales</p>
+                    <div class="skill-level">
+                        <div class="skill-bar" style="--level: 75%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                            <path fill="#e64a19"
+                                d="M13.172 2.828L11.78 4.22l1.91 1.91l2 2A2.986 2.986 0 0 1 20 10.81a3.25 3.25 0 0 1-.31 1.31l2.06 2a2.68 2.68 0 0 1 3.37.57a2.86 2.86 0 0 1 .88 2.117a3.02 3.02 0 0 1-.856 2.109A2.9 2.9 0 0 1 23 19.81a2.93 2.93 0 0 1-2.13-.87a2.694 2.694 0 0 1-.56-3.38l-2-2.06a3 3 0 0 1-.31.12V20a3 3 0 0 1 1.44 1.09a2.92 2.92 0 0 1 .56 1.72a2.88 2.88 0 0 1-.878 2.128a2.98 2.98 0 0 1-2.048.871a2.981 2.981 0 0 1-2.514-4.719A3 3 0 0 1 16 20v-6.38a2.96 2.96 0 0 1-1.44-1.09a2.9 2.9 0 0 1-.56-1.72a2.9 2.9 0 0 1 .31-1.31l-3.9-3.9l-7.579 7.572a4 4 0 0 0-.001 5.658l10.342 10.342a4 4 0 0 0 5.656 0l10.344-10.344a4 4 0 0 0 0-5.656L18.828 2.828a4 4 0 0 0-5.656 0" />
+                        </svg>
+                    </div>
+                    <h3 class="skill-name">Git</h3>
+                    <p class="skill-description">Control de versiones</p>
+                    <div class="skill-level">
+                        <div class="skill-bar" style="--level: 85%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
+    <!-- Contacto -->
     <section id="contact" class="contact-section">
-        <h2>Contacto</h2>
-        <form action="mailto:tu-email@dominio.com" method="post" enctype="text/plain">
-            <label for="name">Nombre:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Correo electrónico:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Mensaje:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-            <button type="submit">Enviar</button>
-        </form>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">04</span>
+                <h2 class="section-title">Contacto</h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3 class="contact-heading">¿Tienes un proyecto en mente?</h3>
+                    <p class="contact-description">
+                        Estoy disponible para proyectos freelance y oportunidades de trabajo.
+                        No dudes en contactarme para discutir cómo puedo ayudarte.
+                    </p>
+                    <div class="contact-methods">
+                        <a href="mailto:freiler@email.com" class="contact-method">
+                            <div class="method-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                    </path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </div>
+                            <div class="method-text">
+                                <span class="method-label">Email</span>
+                                <span class="method-value">aleiroestupinan1999@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="https://github.com/FreilerOrtega" target="_blank" rel="noopener noreferrer"
+                            class="contact-method">
+                            <div class="method-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                </svg>
+                            </div>
+                            <div class="method-text">
+                                <span class="method-label">GitHub</span>
+                                <span class="method-value">FreilerOrtega</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Nombre</label>
+                        <input type="text" id="name" name="name" class="form-input" placeholder="Tu nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Correo electrónico</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="tu@email.com"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="form-label">Mensaje</label>
+                        <textarea id="message" name="message" class="form-input form-textarea"
+                            placeholder="Cuéntame sobre tu proyecto..." rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit">
+                        Enviar mensaje
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
     </section>
 
-    <footer>
-        <p>© 2025 Freiler Ortega. Todos los derechos reservados.</p>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="footer-logo">FO</span>
+                    <p class="footer-tagline">Creando experiencias digitales</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#about">Sobre mí</a>
+                    <a href="#projects">Proyectos</a>
+                    <a href="#skills">Habilidades</a>
+                    <a href="#contact">Contacto</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/FreilerOrtega" target="_blank" rel="noopener noreferrer"
+                        aria-label="GitHub">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/freiler-aleiro-ortega-estupi%C3%B1an-1566b026b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Freiler Ortega. Todos los derechos reservados.</p>
+            </div>
+        </div>
     </footer>
 
-    <script>
-        const toggleButton = document.querySelector('.theme-toggle');
-        const body = document.body;
-        toggleButton.addEventListener('click', () => {
-            body.dataset.theme = body.dataset.theme === 'light' ? 'dark' : 'light';
-        });
-    </script>
+    <script src="main.js"></script>
 </body>
+
 </html>
